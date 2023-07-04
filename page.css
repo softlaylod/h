@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+*::-webkit-scrollbar {
+    width: 15px;
+    background-color: rgb(35, 17, 84);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.414) inset;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(13, 7, 32);
+}
+
+body {
+    background-color: rgba(18 18 18);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: white;
+    background-color: #341f97;
+    user-select: none;
+    align-items: center;
+    z-index: 999;
+    border-bottom: 2px solid #2d1a81;
+}
+
+nav a {
+    color: white;
+    user-select: none;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+nav a:hover {
+    background-color: #190e4b;
+}
+
+.logo:hover {
+    background-color: #190e4b;
+}
+
+.logo {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.main {
+    padding: 20px;
+    padding-top: 200px;
+    height: 100vh;
+}
+
+.card {
+    overflow: hidden;
+    width: 60%;
+    height: 50vh;
+    background-color: rgba(18 18 18);
+    border-radius: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    color: rgb(150, 150, 150);
+    text-transform: capitalize;
+    width: 400px;
+    align-items: center;
+    margin-bottom: 70px;
+    align-items: center;
+    text-align: center;
+}
+
+.info {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width:1000px) {
+    .card {
+        width: 90%;
+    }
+
+    header {
+        padding: 12px 20px;
+    }
+
+    nav a {
+        font-weight: 700;
+    }
+
+    nav a {
+        padding: 0px;
+    }
+}
+
+@media (max-width:730px) {
+    h4 {
+        font-size: 0.8em;
+    }
+
+    nav a {
+        padding: 0px;
+    }
+}
+
+@media (max-width:340px) {
+    h1 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 0.6em;
+    }
+
+    nav a {
+        padding: 0px;
+    }
+}
+
+@media (max-width:280px) {
+    h1 {
+        font-size: 1em;
+    }
+
+    h4 {
+        font-size: 0.7em;
+        width: 190px;
+    }
+
+    .logo {
+        font-size: 1.2em;
+    }
+
+    header {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    nav a {
+        margin-left: 2px;
+        font-size: 0.9em;
+    }
+
+    nav a {
+        padding: 0px;
+    }
+}
+
+@media (max-width:500px) {
+    nav a {
+        font-size: 0.8em;
+        margin-left: 5px;
+        padding: 0px;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.1em;
+    }
+
+    h4 {
+        font-size: 0.7em;
+        width: 320px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.box {
+    width: 150px;
+    height: 50px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    border-radius: 10px;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.wait {
+    width: 100%;
+    height: 100%;
+    z-index: 995;
+    display: flex;
+    justify-content: center;
+    background-color: #2d1a81;
+    text-align: center;
+    align-items: center;
+    color: white;
+    cursor: no-drop;
+    font-size: 1.1em;
+    font-weight: 600;
+    animation: wait-move 10s linear;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -50px;
+    opacity: 1;
+}
+
+@keyframes wait-move {
+    0% {
+        top: -50px;
+    }
+
+    10% {
+        top: 0px;
+    }
+
+    20% {
+        top: 0px;
+    }
+
+    30% {
+        top: 0px;
+    }
+
+    40% {
+        top: 0px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    60% {
+        top: 0px;
+    }
+
+    70% {
+        top: 0px;
+    }
+
+    80% {
+        top: 0px;
+    }
+
+    90% {
+        top: 50px;
+    }
+
+    91% {
+        top: 50px;
+    }
+
+    93% {
+        top: 50px;
+    }
+
+    95% {
+        top: 50px;
+    }
+
+    97% {
+        top: 50px;
+    }
+
+    99% {
+        top: 50px;
+    }
+
+    100% {
+        top: 50px;
+    }
+}
+
+.down {
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: #2d1a81;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    cursor: no-drop;
+    font-size: 1.1em;
+    transition: 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+    animation: down-move 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 8.7s;
+    position: absolute;
+    top: -50px;
+}
+
+.down:hover {
+    cursor: pointer;
+    background-color: #1a0f4b;
+}
+
+@keyframes down-move {
+    0% {
+        top: -50px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+img {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    margin-top: 120px;
+}
+
+.and {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    color: rgb(201, 201, 201);
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-top: -70px;
+    background-color: rgb(28, 28, 28);
+    transition: 0.3s ease;
+}
+
+.title:hover {
+    background-color: rgb(36, 36, 36);
+    transform: scale(1.1);
+}
