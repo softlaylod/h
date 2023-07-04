@@ -96,11 +96,11 @@ body {
 
 @media (max-width:600px) {
     .big {
-        width: 350px;
+        width: 320px;
     }
 
     .smoll {
-        width: 350px;
+        width: 320px;
     }
 }
 

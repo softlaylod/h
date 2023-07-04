@@ -516,6 +516,18 @@ footer {
     .title3 {
         width: 50%;
     }
+
+    .form1::before {
+        padding: 8px 10px;
+    }
+
+    .form2::before {
+        padding: 8px 10px;
+    }
+
+    .form3::before {
+        padding: 8px 10px;
+    }
 }
 
 .flex {
