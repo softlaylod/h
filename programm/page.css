@@ -331,7 +331,7 @@ h4 {
     text-decoration: none;
     animation: down-move 0.5s linear;
     animation-fill-mode: forwards;
-    animation-delay: 8.7s;
+    animation-delay: 8.3s;
     position: absolute;
     top: -50px;
 }
